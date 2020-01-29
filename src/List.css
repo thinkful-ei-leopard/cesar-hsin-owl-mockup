@@ -1,0 +1,17 @@
+.green{
+    background-color: green;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    display: inline-block;
+
+}
+.grey{
+    background-color: grey;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    display: inline-block;
+}

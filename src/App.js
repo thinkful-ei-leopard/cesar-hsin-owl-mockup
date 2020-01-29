@@ -1,23 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import React from 'react';
+import List from './List';
+import Stage from './Stage';
+import './index.css';
+
+
+
+function App(props) {
+  const listOnStage = (props.store.participants).map(item =>
+    <List key={item.id} name ={item.name} image ={item.avatar} join ={item.inSession} stage={item.onStage} />);
+    const listVideo = (props.store.participants).map(item =>
+    <Stage  key={item.id} name ={item.name} image ={item.avatar} join ={item.inSession} stage={item.onStage} />);
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <div>{listOnStage}</div>
+      <div>{listVideo}</div>
       </header>
     </div>
   );
