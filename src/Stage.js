@@ -1,6 +1,8 @@
 import React from 'react';
 import './Stage.css';
 
+
+
 export default function Stage(props){
   if(props.onStage === true){
       return (
@@ -10,6 +12,6 @@ export default function Stage(props){
      </div>
       )
   }else if(props.onStage === false){
-    return null;
+    return ( <div></div>);
   }
 }
